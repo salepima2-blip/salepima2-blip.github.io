@@ -28,7 +28,7 @@ export default function Home() {
             <a className="button ghost" href="/lien-he.html">Nhận tư vấn</a>
           </div>
           <div className="category-row" aria-label="Danh mục sản phẩm">
-            {[['Tủ bếp','/san-pham/tu-bep'], ['Tủ áo','/san-pham/tu-ao'], ['Tủ lavabo','/san-pham/tu-lavabo'], ['Kệ & vách','/san-pham/ke-vach']].map(([item, href], i) => <a href={href} key={item}><b>0{i + 1}</b>{item}</a>)}
+            {[['Tủ bếp','/san-pham/tu-bep.html'], ['Tủ áo','/san-pham/tu-ao.html'], ['Tủ lavabo','/san-pham/tu-lavabo.html'], ['Kệ & vách','/san-pham/ke-vach.html']].map(([item, href], i) => <a href={href} key={item}><b>0{i + 1}</b>{item}</a>)}
           </div>
         </div>
         <div className="hero-gallery" aria-label="Không gian nội thất PIMA">
