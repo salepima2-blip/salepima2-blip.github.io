@@ -1,3 +1,3 @@
-import { ProductDetailPage } from "../../components";
+import CmsProductPage from "../../CmsProductPage";
 import { productData } from "../../product-data";
-export default function Page(){ return <ProductDetailPage product={productData["tu-lavabo"]} />; }
+export default function Page(){ return <CmsProductPage slug="tu-lavabo" fallback={productData["tu-lavabo"]} />; }
