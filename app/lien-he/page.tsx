@@ -1,0 +1,7 @@
+import { Consultation, PageShell } from "../components";
+
+export default function Contact(){return <PageShell>
+  <section className="contact-hero"><div><p className="breadcrumbs"><a href="/">Trang chủ</a> / Liên hệ</p><p className="eyebrow">Kết nối với PIMA</p><h1>Cùng tìm phương án<br /><em>phù hợp nhất</em></h1><p>Cho dù bạn đang làm nội thất cho một căn nhà, vận hành xưởng hay tìm vật liệu cho dự án, PIMA sẵn sàng tiếp nhận nhu cầu và tư vấn bước tiếp theo.</p></div><div className="contact-cards"><article><span>01</span><h2>Tư vấn sản phẩm</h2><p>Tủ bếp, tủ áo, tủ lavabo, kệ – vách và các ứng dụng khác.</p><a href="#tu-van">Gửi nhu cầu →</a></article><article><span>02</span><h2>Hợp tác kinh doanh</h2><p>Dành cho xưởng, đại lý, OEM, đơn vị thi công và dự án.</p><a href="/doi-tac">Xem chính sách hợp tác →</a></article></div></section>
+  <section className="contact-prep"><div><p className="eyebrow">Chuẩn bị trước khi tư vấn</p><h2>Ba thông tin giúp<br /><em>tư vấn nhanh hơn</em></h2></div><ol><li><b>01</b><h3>Sản phẩm cần làm</h3><p>Loại tủ, số lượng hoặc nhóm sản phẩm quan tâm.</p></li><li><b>02</b><h3>Kích thước dự kiến</h3><p>Bản vẽ, ảnh hiện trạng hoặc kích thước cơ bản nếu có.</p></li><li><b>03</b><h3>Mong muốn hoàn thiện</h3><p>Phong cách, màu sắc, thời gian và ngân sách dự kiến.</p></li></ol></section>
+  <Consultation title="Để lại thông tin, PIMA sẽ liên hệ" />
+  </PageShell>}
