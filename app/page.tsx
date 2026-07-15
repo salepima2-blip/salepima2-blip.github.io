@@ -1,9 +1,9 @@
 import { Consultation, Footer, Header } from "./components";
 
 const products = [
-  { name: "Tủ bếp", tag: "Bền trong môi trường ẩm", image: "/images/kitchen.webp", href: "/san-pham/tu-bep" },
-  { name: "Tủ áo", tag: "Sạch, đẹp và không mối mọt", image: "/images/wardrobe.webp", href: "/san-pham/tu-ao" },
-  { name: "Tủ lavabo", tag: "An tâm ở khu vực thường xuyên có nước", image: "/images/vanity.webp", href: "/san-pham/tu-lavabo" },
+  { name: "Tủ bếp", tag: "Bền trong môi trường ẩm", image: "/images/kitchen.webp", href: "/san-pham/tu-bep.html" },
+  { name: "Tủ áo", tag: "Sạch, đẹp và không mối mọt", image: "/images/wardrobe.webp", href: "/san-pham/tu-ao.html" },
+  { name: "Tủ lavabo", tag: "An tâm ở khu vực thường xuyên có nước", image: "/images/vanity.webp", href: "/san-pham/tu-lavabo.html" },
 ];
 
 const benefits = [
@@ -24,8 +24,8 @@ export default function Home() {
           <h1>Bền đẹp từ <em>cốt vật liệu</em></h1>
           <p className="hero-lead">Từ tủ bếp, tủ áo đến tủ lavabo và hệ kệ – vách: một hệ vật liệu chống nước, chống mối mọt, dễ vệ sinh và linh hoạt theo từng thiết kế.</p>
           <div className="hero-actions">
-            <a className="button primary" href="/san-pham">Khám phá sản phẩm <span>→</span></a>
-            <a className="button ghost" href="/lien-he">Nhận tư vấn</a>
+            <a className="button primary" href="/san-pham.html">Khám phá sản phẩm <span>→</span></a>
+            <a className="button ghost" href="/lien-he.html">Nhận tư vấn</a>
           </div>
           <div className="category-row" aria-label="Danh mục sản phẩm">
             {[['Tủ bếp','/san-pham/tu-bep'], ['Tủ áo','/san-pham/tu-ao'], ['Tủ lavabo','/san-pham/tu-lavabo'], ['Kệ & vách','/san-pham/ke-vach']].map(([item, href], i) => <a href={href} key={item}><b>0{i + 1}</b>{item}</a>)}
@@ -42,7 +42,7 @@ export default function Home() {
         <p className="eyebrow">Vật liệu tạo nên khác biệt</p>
         <div className="intro-grid">
           <h2>Nội thất đẹp cần bắt đầu từ một <em>nền tảng bền.</em></h2>
-          <div><p>Tấm nhựa PIMA giúp giải quyết những nỗi lo thường gặp của nội thất trong môi trường nóng ẩm: nước, mối mọt và việc vệ sinh hằng ngày.</p><a className="text-link" href="/vat-lieu-pima">Tìm hiểu vật liệu <span>→</span></a></div>
+          <div><p>Tấm nhựa PIMA giúp giải quyết những nỗi lo thường gặp của nội thất trong môi trường nóng ẩm: nước, mối mọt và việc vệ sinh hằng ngày.</p><a className="text-link" href="/vat-lieu-pima.html">Tìm hiểu vật liệu <span>→</span></a></div>
         </div>
         <div className="benefit-grid">
           {benefits.map(([no, title, desc]) => <article key={no}><span>{no}</span><h3>{title}</h3><p>{desc}</p></article>)}
@@ -63,7 +63,7 @@ export default function Home() {
 
       <section className="partner" id="doi-tac">
         <div><p className="eyebrow">Dành cho xưởng & đối tác</p><h2>Chủ động vật liệu.<br /><em>Mở rộng sản phẩm.</em></h2></div>
-        <div><p>PIMA cung cấp tấm ván nhựa và giải pháp vật liệu cho xưởng nội thất, nhà phân phối, đơn vị thiết kế – thi công và dự án.</p><ul><li>Nguồn hàng từ nhà sản xuất</li><li>Đa dạng độ dày và bề mặt</li><li>Hỗ trợ mẫu, kỹ thuật và chính sách theo sản lượng</li></ul><a className="button primary" href="/doi-tac">Trở thành đối tác <span>→</span></a></div>
+        <div><p>PIMA cung cấp tấm ván nhựa và giải pháp vật liệu cho xưởng nội thất, nhà phân phối, đơn vị thiết kế – thi công và dự án.</p><ul><li>Nguồn hàng từ nhà sản xuất</li><li>Đa dạng độ dày và bề mặt</li><li>Hỗ trợ mẫu, kỹ thuật và chính sách theo sản lượng</li></ul><a className="button primary" href="/doi-tac.html">Trở thành đối tác <span>→</span></a></div>
       </section>
       <Consultation />
       <Footer />

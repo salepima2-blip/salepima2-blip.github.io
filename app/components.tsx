@@ -9,17 +9,17 @@ export function Header() {
     <a className="brand" href="/" aria-label="PIMA Interior - Trang chủ">PIMA<span>INTERIOR</span></a>
     <button className="menu-button" onClick={() => setOpen(!open)} aria-expanded={open} aria-label="Mở menu">{open ? "Đóng" : "Menu"}</button>
     <nav className={open ? "nav open" : "nav"} aria-label="Điều hướng chính">
-      <a href="/san-pham" onClick={() => setOpen(false)}>Sản phẩm</a>
-      <a href="/vat-lieu-pima" onClick={() => setOpen(false)}>Vật liệu PIMA</a>
-      <a href="/doi-tac" onClick={() => setOpen(false)}>Dành cho đối tác</a>
-      <a href="/lien-he" onClick={() => setOpen(false)}>Liên hệ</a>
+      <a href="/san-pham.html" onClick={() => setOpen(false)}>Sản phẩm</a>
+      <a href="/vat-lieu-pima.html" onClick={() => setOpen(false)}>Vật liệu PIMA</a>
+      <a href="/doi-tac.html" onClick={() => setOpen(false)}>Dành cho đối tác</a>
+      <a href="/lien-he.html" onClick={() => setOpen(false)}>Liên hệ</a>
     </nav>
-    <a className="header-cta" href="/lien-he">Nhận tư vấn <span>↗</span></a>
+    <a className="header-cta" href="/lien-he.html">Nhận tư vấn <span>↗</span></a>
   </header>;
 }
 
 export function Footer() {
-  return <footer><a className="brand footer-brand" href="/">PIMA<span>INTERIOR</span></a><p>Giải pháp nội thất bền đẹp từ tấm nhựa PIMA.</p><div><a href="/san-pham">Sản phẩm</a><a href="/vat-lieu-pima">Vật liệu</a><a href="/doi-tac">Đối tác</a><a href="/lien-he">Liên hệ</a></div><small>© 2026 PIMA. Nội dung mang tính giới thiệu và tư vấn sản phẩm.</small></footer>;
+  return <footer><a className="brand footer-brand" href="/">PIMA<span>INTERIOR</span></a><p>Giải pháp nội thất bền đẹp từ tấm nhựa PIMA.</p><div><a href="/san-pham.html">Sản phẩm</a><a href="/vat-lieu-pima.html">Vật liệu</a><a href="/doi-tac.html">Đối tác</a><a href="/lien-he.html">Liên hệ</a></div><small>© 2026 PIMA. Nội dung mang tính giới thiệu và tư vấn sản phẩm.</small></footer>;
 }
 
 export function PageShell({ children }: { children: ReactNode }) {
@@ -48,7 +48,7 @@ export type ProductDetail = {
 export function ProductDetailPage({ product }: { product: ProductDetail }) {
   return <PageShell>
     <section className="detail-hero">
-      <div className="detail-copy"><p className="breadcrumbs"><a href="/">Trang chủ</a> / <a href="/san-pham">Sản phẩm</a> / {product.name}</p><p className="eyebrow">{product.kicker}</p><h1>{product.headline}</h1><p>{product.intro}</p><div className="hero-actions"><a className="button primary" href="#tu-van">Nhận tư vấn <span>↗</span></a><a className="button ghost" href="#cau-tao">Xem cấu tạo</a></div></div>
+      <div className="detail-copy"><p className="breadcrumbs"><a href="/">Trang chủ</a> / <a href="/san-pham.html">Sản phẩm</a> / {product.name}</p><p className="eyebrow">{product.kicker}</p><h1>{product.headline}</h1><p>{product.intro}</p><div className="hero-actions"><a className="button primary" href="#tu-van">Nhận tư vấn <span>↗</span></a><a className="button ghost" href="#cau-tao">Xem cấu tạo</a></div></div>
       <div className="detail-image"><img src={product.image} alt={`Nội thất ${product.name} từ tấm nhựa PIMA`} /><span>{product.index}</span></div>
     </section>
     <section className="detail-summary"><p className="eyebrow">Giải pháp phù hợp</p><div className="summary-grid"><h2>Thiết kế theo không gian.<br /><em>Bền theo thời gian.</em></h2><ul>{product.fit.map(item => <li key={item}>{item}</li>)}</ul></div></section>
@@ -61,5 +61,5 @@ export function ProductDetailPage({ product }: { product: ProductDetail }) {
 
 export function RelatedProducts({ current }: { current?: string }) {
   const items = productLinks.filter(p => p.name !== current);
-  return <section className="related"><div className="section-heading"><div><p className="eyebrow">Khám phá thêm</p><h2>Các giải pháp<br /><em>cùng hệ PIMA</em></h2></div><a className="text-link" href="/san-pham">Xem tất cả sản phẩm <span>→</span></a></div><div className="related-grid">{items.slice(0,3).map(p => <a href={p.href} key={p.name}><img src={p.image} alt={p.name} /><span>{p.name} ↗</span></a>)}</div></section>;
+  return <section className="related"><div className="section-heading"><div><p className="eyebrow">Khám phá thêm</p><h2>Các giải pháp<br /><em>cùng hệ PIMA</em></h2></div><a className="text-link" href="/san-pham.html">Xem tất cả sản phẩm <span>→</span></a></div><div className="related-grid">{items.slice(0,3).map(p => <a href={p.href} key={p.name}><img src={p.image} alt={p.name} /><span>{p.name} ↗</span></a>)}</div></section>;
 }
